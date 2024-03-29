@@ -9,8 +9,6 @@ use App\Http\Controllers\PointsController;
 use App\Http\Controllers\ResultsController;
 use App\Http\Controllers\SavedSelectionsController;
 use App\Http\Controllers\userController;
-use App\Http\Controllers\webscrapperController;
-use App\Models\Freebetconditions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -106,9 +104,6 @@ Route::group([], function(){
     Route::delete('/delete/total-result/home-away/{id}', [ResultsController::class, 'deleteHomeAwayResult']);
 });
 
-Route::group([], function(){
-    Route::get('/scrapped-data', [webscrapperController::class, 'srapeData']);
-});
 
 //user routes
 Route::group([], function(){
